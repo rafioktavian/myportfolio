@@ -35,7 +35,7 @@ export function About() {
                 src="/images/profile/akhmad-rafi-oktavian.webp"
                 alt={`Portrait of ${profile.name}`}
                 fill
-                sizes="(max-width: 767px) 100vw, 50vw"
+                sizes="(max-width: 767px) 55vw, 25vw"
                 className="object-cover"
               />
               <span className="about-block__photo-caption">
@@ -49,7 +49,7 @@ export function About() {
                 src="/images/projects/process-optimisation.webp"
                 alt="Process optimisation sketch animation"
                 fill
-                sizes="(max-width: 767px) 50vw, 25vw"
+                sizes="(max-width: 767px) 40vw, 25vw"
                 className="object-cover"
               />
             </div>

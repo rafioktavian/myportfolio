@@ -39,10 +39,13 @@ export function ClientWork() {
                 <span className="index-list__year">{project.year}</span>
                 <span className="index-list__strip" aria-hidden="true">
                   <span className="index-list__strip-image">
-                    <Image src={project.image} alt="" fill sizes="50vw" className="object-cover" />
-                  </span>
-                  <span className="index-list__strip-image">
-                    <Image src={project.image} alt="" fill sizes="50vw" className="object-cover" />
+                    <Image
+                      src={project.image}
+                      alt=""
+                      fill
+                      sizes="(max-width: 767px) calc(100vw - 56px), 50vw"
+                      className="object-cover"
+                    />
                   </span>
                 </span>
               </>
