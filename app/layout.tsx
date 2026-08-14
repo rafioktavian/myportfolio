@@ -45,7 +45,10 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "0H6BSoksju1IxcB6vkdvKg4siKBDd_ccORKNZbd9FGc",
+    google: [
+      "0H6BSoksju1IxcB6vkdvKg4siKBDd_ccORKNZbd9FGc",
+      "google292a343df6cd419e.html",
+    ],
   },
   openGraph: {
     title: siteConfig.title,
