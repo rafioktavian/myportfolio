@@ -3,6 +3,7 @@ import { ClientWork } from "@/components/client-work";
 import { CustomCursor } from "@/components/custom-cursor";
 import { Hero } from "@/components/hero";
 import { ProjectGrid } from "@/components/project-grid";
+import { ProductDemo } from "@/components/ProductDemo";
 import { ScrollEffects } from "@/components/scroll-effects";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNav } from "@/components/site-nav";
@@ -69,6 +70,7 @@ export default function Home() {
         <Hero />
         <ClientWork />
         <ProjectGrid />
+        <ProductDemo />
         <About />
       </main>
       <SiteFooter />

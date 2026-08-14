@@ -923,6 +923,162 @@ html[data-scroll-direction="up"] .site-header {
   margin-top: var(--s5);
 }
 
+.product-demo-panel {
+  --background: #0e0e0e;
+  --background-elevated: #151515;
+  --foreground: #f2f2f2;
+  --muted: #8b8b8b;
+  --border: #292929;
+  --btn: #202020;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(280px, 2fr);
+  align-items: center;
+  gap: var(--s5);
+  border: 1px solid var(--border);
+  background: var(--background-elevated);
+  padding: var(--s4);
+  color: var(--foreground);
+}
+
+.product-demo-browser {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--background);
+  box-shadow: 0 24px 80px #0000003d;
+}
+
+.product-demo-browser__bar {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  gap: var(--s3);
+  padding-inline: var(--s3);
+  border-bottom: 1px solid var(--border);
+  background: var(--background-elevated);
+}
+
+.product-demo-browser__dots {
+  display: flex;
+  flex: none;
+  gap: var(--s2);
+}
+
+.product-demo-browser__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.product-demo-browser__dot--red {
+  background: #ef4444b3;
+}
+
+.product-demo-browser__dot--yellow {
+  background: #eab308b3;
+}
+
+.product-demo-browser__dot--green {
+  background: #22c55eb3;
+}
+
+.product-demo-browser__address {
+  min-width: 0;
+  overflow: hidden;
+  flex: 1;
+  border: 1px solid var(--border);
+  background: var(--btn);
+  padding: 5px var(--s2);
+  color: var(--muted);
+  font-family: var(--font-label);
+  font-size: var(--type-label);
+  line-height: 1;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-demo-browser__viewport {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.product-demo-browser__iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 0;
+  background: #ffffff;
+}
+
+.product-demo-browser__open {
+  position: absolute;
+  right: var(--s2);
+  bottom: var(--s2);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s1);
+  padding: 8px 10px;
+  background: #0e0e0ee6;
+  color: #f2f2f2;
+  font-family: var(--font-label);
+  font-size: var(--type-label);
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  transition: background-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+.product-demo-browser__open:hover {
+  background: #0e0e0e;
+  transform: translateY(-1px);
+}
+
+.product-demo-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.product-demo-copy__heading {
+  max-width: 13ch;
+}
+
+.product-demo-copy__body {
+  margin-top: var(--s4);
+}
+
+.product-demo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+  margin: var(--s4) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-demo-tags li {
+  border: 1px solid var(--border);
+  padding: 6px 8px;
+  color: var(--muted);
+  font-family: var(--font-label);
+  font-size: var(--type-label);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.product-demo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+  margin-top: var(--s5);
+}
+
 .about-block {
   display: flex;
   align-items: stretch;
@@ -1245,6 +1401,14 @@ html[data-scroll-direction="up"] .site-header {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .product-demo-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .product-demo-copy {
+    order: -1;
+  }
+
   .produx-footer__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 64px 24px;
@@ -1406,6 +1570,35 @@ html[data-scroll-direction="up"] .site-header {
   .makers-wall__caption {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .product-demo-panel {
+    gap: var(--s4);
+    padding: var(--s3);
+  }
+
+  .product-demo-browser__iframe {
+    max-height: 520px;
+    aspect-ratio: 9 / 13;
+  }
+
+  .product-demo-browser__dots {
+    gap: var(--s1);
+  }
+
+  .product-demo-browser__dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .product-demo-actions {
+    width: 100%;
+    flex-direction: column;
+    margin-top: var(--s4);
+  }
+
+  .product-demo-actions .oi-btn {
+    width: 100%;
   }
 
   .about-block {
