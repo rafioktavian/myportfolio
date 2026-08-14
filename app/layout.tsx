@@ -45,10 +45,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: [
-      "0H6BSoksju1IxcB6vkdvKg4siKBDd_ccORKNZbd9FGc",
-      "google292a343df6cd419e.html",
-    ],
+    google: "GANTI_DENGAN_TOKEN_YANG_BENAR",
   },
   openGraph: {
     title: siteConfig.title,
