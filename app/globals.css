@@ -595,7 +595,18 @@ html[data-scroll-direction="up"] .site-header {
 }
 
 .showreel-reel {
+  width: 100%;
   aspect-ratio: 16 / 9;
+}
+
+/* Keep the absolutely positioned reel visible on Safari versions that do not
+   calculate aspect-ratio for a grid item reliably. */
+@supports not (aspect-ratio: 16 / 9) {
+  .showreel-reel::before {
+    display: block;
+    padding-top: 56.25%;
+    content: "";
+  }
 }
 
 .showreel-slide {
@@ -690,13 +701,11 @@ html[data-scroll-direction="up"] .site-header {
 
 @keyframes showreel-slide-in {
   from {
-    clip-path: inset(0 100% 0 0);
-    opacity: 0.55;
+    opacity: 0.35;
     transform: scale(1.055);
   }
 
   to {
-    clip-path: inset(0);
     opacity: 1;
     transform: scale(1);
   }

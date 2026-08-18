@@ -32,7 +32,7 @@ export function Hero() {
 
       <section className="showreel-band" aria-label="Selected project previews">
         <Container>
-          <Reveal className="showreel-grid">
+          <div className="showreel-grid">
             <ProjectShowreel />
 
             <div className="showreel-aside">
@@ -44,7 +44,7 @@ export function Hero() {
                 <span>Build in progress</span>
               </div>
             </div>
-          </Reveal>
+          </div>
         </Container>
       </section>
     </>
